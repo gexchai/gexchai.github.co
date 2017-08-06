@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gcblog.site/"/>
-  <updated>2017-08-05T04:33:26.000Z</updated>
+  <updated>2017-08-06T00:49:23.000Z</updated>
   <id>http://gcblog.site/</id>
   
   <author>
@@ -16,28 +16,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://gcblog.site/2017/08/05/hello-world/"/>
-    <id>http://gcblog.site/2017/08/05/hello-world/</id>
-    <published>2017-08-05T04:33:26.000Z</published>
-    <updated>2017-08-05T04:33:26.000Z</updated>
+    <title>Using Jira as workflow engine with Zapier/ Slack/ Gsuite / Symfony/ Canvas</title>
+    <link href="http://gcblog.site/2017/08/06/using-jira-as-workflow-engine-with-zapier-Slack-Gsuite-Symfony-Canvas/"/>
+    <id>http://gcblog.site/2017/08/06/using-jira-as-workflow-engine-with-zapier-Slack-Gsuite-Symfony-Canvas/</id>
+    <published>2017-08-06T00:34:44.000Z</published>
+    <updated>2017-08-06T00:49:23.000Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+    <content type="html"><![CDATA[<p>Recently I have a chance to manage a project which across a lot of different pieces of software. The goal and outcome is very interesting and I would like to share with others about it. </p>
+<p>So the initial application which is built on symfony is about helping educators on boarding to different institutions and when it does, there will be a lot of manual work involve:</p>
+<ul>
+<li>Create account in Gsuite admin(google business suite with gmail, calendars, drive..etc)</li>
+<li>Create account in Slack for support and instant collaborative work</li>
+<li>Create account in Canvas which is a community tools for academic</li>
+</ul>
+<p>Also there is not enough visual ability to monitor all different cases happening in the application, well, we do have a status tag in the Symfony application itself to show to the operator but we want a better visual like a Trello board to display clearly who is currently waiting for interview, waiting for reference check or who has been rejected…etc </p>
+<p>Lastly, most of the time the person who decided the workflow will not be the same guy who is writing the code. So in order to let the business and operation team have full visual and control on the work flow, we need a workflow engine which is able to lock the current process inside our Symfony application and the application can only update the case status according to the flow from the workflow engine.</p>
+<p><strong>So why Jira?</strong><br>There is a lot of existing software solution in the market but none of them can fit into our requirement entirely. Since there will be some hard work involve in any solution, why don’t we choose something that we are familiar, have great API and a UI which “approved” from our business development team.</p>
+<p><strong>So how to connect them together?</strong><br>I think most of the coders will either start creating a service inside our symfony application or just build a application to pass through the data in between. The funny part of this project is, one of the requirement is to allow some room for non-technical people to trace up which data has been sent and receive, status of each call and even let them modify what need to be passed in each API. In this case, we will need a tools which can provide a clean and easy API for all the API calls status and also a drag and drop tools for our team to modify the API data. And that’s why we end up using Zapier as our middle man.</p>
+<p>I will share some codes in Part 2 which I have used in this project and the steps of how I setup those service particularly those mistakes that I have made during the process.</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      &lt;p&gt;Recently I have a chance to manage a project which across a lot of different pieces of software. The goal and outcome is very interesting
     
     </summary>
+    
+      <category term="Tech" scheme="http://gcblog.site/categories/Tech/"/>
     
     
   </entry>

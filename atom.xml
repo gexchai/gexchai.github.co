@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gcblog.site/"/>
-  <updated>2017-08-06T00:49:23.000Z</updated>
+  <updated>2017-08-06T01:21:17.000Z</updated>
   <id>http://gcblog.site/</id>
   
   <author>
@@ -20,21 +20,7 @@
     <link href="http://gcblog.site/2017/08/06/using-jira-as-workflow-engine-with-zapier-Slack-Gsuite-Symfony-Canvas/"/>
     <id>http://gcblog.site/2017/08/06/using-jira-as-workflow-engine-with-zapier-Slack-Gsuite-Symfony-Canvas/</id>
     <published>2017-08-06T00:34:44.000Z</published>
-    <updated>2017-08-06T00:49:23.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Recently I have a chance to manage a project which across a lot of different pieces of software. The goal and outcome is very interesting and I would like to share with others about it. </p>
-<p>So the initial application which is built on symfony is about helping educators on boarding to different institutions and when it does, there will be a lot of manual work involve:</p>
-<ul>
-<li>Create account in Gsuite admin(google business suite with gmail, calendars, drive..etc)</li>
-<li>Create account in Slack for support and instant collaborative work</li>
-<li>Create account in Canvas which is a community tools for academic</li>
-</ul>
-<p>Also there is not enough visual ability to monitor all different cases happening in the application, well, we do have a status tag in the Symfony application itself to show to the operator but we want a better visual like a Trello board to display clearly who is currently waiting for interview, waiting for reference check or who has been rejected…etc </p>
-<p>Lastly, most of the time the person who decided the workflow will not be the same guy who is writing the code. So in order to let the business and operation team have full visual and control on the work flow, we need a workflow engine which is able to lock the current process inside our Symfony application and the application can only update the case status according to the flow from the workflow engine.</p>
-<p><strong>So why Jira?</strong><br>There is a lot of existing software solution in the market but none of them can fit into our requirement entirely. Since there will be some hard work involve in any solution, why don’t we choose something that we are familiar, have great API and a UI which “approved” from our business development team.</p>
-<p><strong>So how to connect them together?</strong><br>I think most of the coders will either start creating a service inside our symfony application or just build a application to pass through the data in between. The funny part of this project is, one of the requirement is to allow some room for non-technical people to trace up which data has been sent and receive, status of each call and even let them modify what need to be passed in each API. In this case, we will need a tools which can provide a clean and easy API for all the API calls status and also a drag and drop tools for our team to modify the API data. And that’s why we end up using Zapier as our middle man.</p>
-<p>I will share some codes in Part 2 which I have used in this project and the steps of how I setup those service particularly those mistakes that I have made during the process.</p>
-]]></content>
+    <updated>2017-08-06T01:21:17.000Z</updated>
     
     <summary type="html">
     
@@ -54,16 +40,6 @@
     <published>2017-06-17T05:31:36.000Z</published>
     <updated>2017-08-05T05:44:26.000Z</updated>
     
-    <content type="html"><![CDATA[<div>It is quite sad when I was writing up this blog post because I am trying to reference down the key factors of why my startup to be failure.</div><br><div></div><br><div>Is been almost 1.5 years since we have created our startup and there is a lot of up and down moment and recently we have decided to walk away. Of course the major reason as always is about money. The initial seed funding which my business partner and I have put together ourselves has finished already and so far we still can’t secure any further funding or start getting any traction.</div><br><div></div><br><div>Second key issue is our network. We initially have three key contacts inside the industry which help us kicking off in the early stage. Unfortunately, two of them have left the company and the final company also got acquired by other one( good for them). And due to the confidential rule or whatever, they can’t really tell us all those factors even thought they already resigned when we start approaching them about our startup. This create a lot of impact to our journey particularly a lot of potential client is looking at them as their guidance.</div><br><div></div><br><div>Third issue is related to our decision making. We are too concern about our equity and thinking too much about losing too much equity in the early stage. We believe we know very well about how to build our product and we don’t need any extra help until a later stage so we don’t have to lose equity when people only input a small amount of effort. Unfortunately, a big name is exactly what we are missing in our startup. If we willing to use equity to get some big guns on board, I reckon this will become a different story. At the end of the day, this is just our first startup, we should focus on getting our product right. Once we become famous ourselves, we will have more bargaining powers in the market.</div><br><div></div><br><div>To summarise:</div>
-
-<ol>
-<li>Speed - you never know what’s going on next week and whether the people who supporting you right now will change their mind. So act fast</li>
-<li>Use your equity wisely to exchange something you need most for your startup</li>
-<li>Go out and tell people about your idea loud even before you have your MVP. No-one care to steal your idea.</li>
-<li>Start raising funding even before you think you need it</li>
-</ol>
-]]></content>
-    
     <summary type="html">
     
       &lt;div&gt;It is quite sad when I was writing up this blog post because I am trying to reference down the key factors of why my startup to be fail
@@ -81,13 +57,6 @@
     <id>http://gcblog.site/2016/09/15/upgrading-laravel-4-to-laravel-5-3/</id>
     <published>2016-09-15T05:41:40.000Z</published>
     <updated>2017-08-05T05:44:26.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>The tech stack behind my startup is Laravel 4. Although the journey has pretty much finished, I would still like to upgrade it to the latest Laravel which is 5.3 to understand more about the latest version. The steps that I take is following the upgrade guide from 4.2 upgrade to 5.0 then 5.1-&gt;5.2 and then end 5.3-&gt;5.2.</p>
-<p>I have try to go straight to 5.3 initially but realise there is so much things I have missed so I actually decided to upgrade it one by one at the end. Remember to go through the deprecations part since the section is small and easy to miss. Two hip up I have after the upgrade is lists() no longer a array but just a collection. In order to get back the whole array, add -&gt;all() behind.</p>
-<p>Lastly, lists has been deprecated and you need to use pluck instead. So</p>
-<p><pre class="prettyprint">pluck()-&gt;all()</pre><br>is what you need to use in the future.</p>
-<p>&nbsp;</p>
-]]></content>
     
     <summary type="html">
     
@@ -107,8 +76,6 @@
     <published>2016-05-14T04:59:18.000Z</published>
     <updated>2017-08-05T05:44:26.000Z</updated>
     
-    <content type="html"><![CDATA[<div>We are delighted to be working with major retailers in Singapore.</div><br><div>Read more here:</div><br><div>Retail News Asia: <a href="http://www.retailnews.asia/help-retail-electronics-customers-navigate-right-products/" target="_blank" rel="external">http://www.retailnews.asia/help-retail-electronics-customers-navigate-right-products/</a></div><br><div>Inside Retail Asia: <a href="https://insideretail.asia/2016/03/14/product-lighthouse-to-launch-in-singapore/" target="_blank" rel="external">https://insideretail.asia/2016/03/14/product-lighthouse-to-launch-in-singapore/</a></div><br><div></div><br><div>Get in touch with us for more information.</div>]]></content>
-    
     <summary type="html">
     
       &lt;div&gt;We are delighted to be working with major retailers in Singapore.&lt;/div&gt;&lt;br&gt;&lt;div&gt;Read more here:&lt;/div&gt;&lt;br&gt;&lt;div&gt;Retail News Asia: &lt;a href
@@ -127,10 +94,6 @@
     <published>2016-03-21T08:00:00.000Z</published>
     <updated>2017-08-05T05:44:26.000Z</updated>
     
-    <content type="html"><![CDATA[<p><span class="s1">Singaporean companies signing up to Product Lighthouse may qualify for up to <strong>70%</strong> subsidy under the Capability Development Grant.</span></p>
-<p><span class="s1">Contact us or visit: <a href="http://www.spring.gov.sg/Growing-Business/Grant/Pages/capability-development-grant.aspx" target="_blank" rel="external"><span class="s2">http://www.spring.gov.sg/Growing-Business/Grant/Pages/capability-development-grant.aspx</span></a>  The CDG has been developed to support productivity improvements, service excellence and other related areas. </span></p>
-]]></content>
-    
     <summary type="html">
     
       &lt;p&gt;&lt;span class=&quot;s1&quot;&gt;Singaporean companies signing up to Product Lighthouse may qualify for up to &lt;strong&gt;70%&lt;/strong&gt; subsidy under the Capa
@@ -148,11 +111,6 @@
     <id>http://gcblog.site/2016/03/04/techinasia-singapore-2016-we-are-coming-again/</id>
     <published>2016-03-03T21:01:22.000Z</published>
     <updated>2017-08-05T05:44:26.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><span class="s1">We are excited to be selected by  Tech in Asia and exhibiting once more in TIA SG 2016.</span></p>
-<p><span class="s1">Find out more about how <a href="http://productlighthouse.com/" target="_blank" rel="external">Product Lighthouse</a> can help retailers and manufactures make the most of product information for discovery and sales. </span><span class="s1">Congratulations also to fellow Australian B2B business <a href="http://skop.es/" target="_blank" rel="external"><span class="s2">Skop.es</span></a> who are also selected to exhibit.</span></p>
-<p><a href="https://www.techinasia.com/9-international-startups-flying-exhibit-tia-sg-2016" target="_blank" rel="external">https://www.techinasia.com/9-international-startups-flying-exhibit-tia-sg-2016</a></p>
-]]></content>
     
     <summary type="html">
     
@@ -173,10 +131,6 @@
     <published>2016-02-11T01:01:48.000Z</published>
     <updated>2017-08-05T05:44:26.000Z</updated>
     
-    <content type="html"><![CDATA[<p>We are very happy that we have been selected to join the PauseFest 2016 TechDay and become one of the startup there.</p>
-<p><img src="http://13.55.244.246/wp-content/uploads/2017/06/IMG_6535-300x225.jpg" alt=""> <img src="http://13.55.244.246/wp-content/uploads/2017/06/IMG_6532-300x225.jpg" alt=""></p>
-]]></content>
-    
     <summary type="html">
     
       &lt;p&gt;We are very happy that we have been selected to join the PauseFest 2016 TechDay and become one of the startup there.&lt;/p&gt;
@@ -196,12 +150,6 @@
     <published>2015-05-15T01:07:38.000Z</published>
     <updated>2017-08-05T05:44:26.000Z</updated>
     
-    <content type="html"><![CDATA[<p>We’ve had a great time during this event and thank you to Techinasia Singapore 2015 for organising this wonderful program. Lots of useful speeches have provided us a lot of valuable knowledge.</p>
-<p>Also by talking to lot of people during the event we are confident that we are heading on right path towards solving the problem of poor-quality product information in retail.</p>
-<p>&nbsp;</p>
-<p><img src="http://13.55.244.246/wp-content/uploads/2015/05/IMG_5629-225x300.jpg" alt=""></p>
-]]></content>
-    
     <summary type="html">
     
       &lt;p&gt;We’ve had a great time during this event and thank you to Techinasia Singapore 2015 for organising this wonderful program. Lots of useful
@@ -219,8 +167,6 @@
     <id>http://gcblog.site/2015/05/07/ventures-start/</id>
     <published>2015-05-07T02:02:07.000Z</published>
     <updated>2017-08-05T05:44:26.000Z</updated>
-    
-    <content type="html"><![CDATA[<div>Today is a remarkable day which is the day that I decided to start my startup ventures with another business partner.</div><br><div></div><br><div>My business partner and I were working in the same company before which is a sass platform for retail after sales services. During that period, we discovered that the product content is a mess in different system without any standardisation. For example: retailer A like to call mobile as handset in their database and retailer B like to call it mobilephone. So this create a lot of hassle to vendors especially when they try to submit the product content to retailer. Not to mention the process of uploading product content from vendors to retailers is still remaining in stone ages with emails and phone calls all the time. Surprisingly, people still try to overcome this issue manually and our startup is trying to streamline the whole process by create a standardized platform to hold the product content and feed to anyone who want it.</div><br><div></div><br><div>We have already spent a few months for R&amp;D and we have received a lot of positive feedback so far and people are saying they are looking forward to see our product. This give us a lot of positive energy and confident to start building our product.</div><br><div></div><br><div>We have chosen Laravel 4 to build our product purely because I familiar with it the most and laravel 5 hasn’t come out at this time. We didn’t really spend a lot of time to puzzling our tech stack since we want to rush out our first prototype ASAP to test out the market and also try to collect more valuable feedback from potential customers.</div>]]></content>
     
     <summary type="html">
     
